@@ -34,8 +34,8 @@ $ import 'blox-paper';
 
 ```html
 <blox-paper
-    public-key="EOS998f7n98f7gh8n9f7n987cvb8n"
-    private-key="9v2c987D9cv78cxvb798x789Wx98897Ccv8bvioaW"
+    public-key="EOS8VWYBpVzYYGM7uCMLzKx5WHeMNogFD3Wj4ozCtujinH4c7wDTH"
+    private-key="5KSN3j1db45aoA5QjjYhAmbp5AsAM99QM5Dd2xBxjgTRvYH1ivX"
     error="{{error}}">
 </blox-paper>
 ```
