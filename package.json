@@ -1,6 +1,6 @@
 {
   "name": "blox-paper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "@bkawk",
   "license": "MIT",
   "repository": "https://github.com/eosblox/blox-paper",
@@ -8,7 +8,7 @@
   "main": "blox-paper.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
-    "blox-print": "^1.0.3",
+    "blox-print": "^1.0.4",
     "blox-qrcode": "^1.0.1"
   },
   "devDependencies": {

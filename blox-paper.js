@@ -57,7 +57,7 @@ class BloxPaper extends PolymerElement {
     return new Promise((resolve, reject) => {
       return Promise.all([this.$.qrcode.make(publicKey1), this.$.qrcode.make(privateKey1)])
       .then((qr) => {
-      this._print1(qr[0], qr[1])
+      this._print1(qr[0], qr[1], publicKey1, privateKey1)
       })
     })
   }
@@ -65,11 +65,11 @@ class BloxPaper extends PolymerElement {
   makeTwo(publicKey1, privateKey1, publicKey2, privateKey2) {
     return Promise.all([this.$.qrcode.make(publicKey1), this.$.qrcode.make(privateKey1), this.$.qrcode.make(publicKey2), this.$.qrcode.make(privateKey2)])
     .then((qr) => {
-      this._print2(qr[0], qr[1], qr[2], qr[3])
+      this._print2(qr[0], qr[1], qr[2], qr[3], publicKey1, privateKey1, publicKey2, privateKey2)
     })
   }
 
-_print1(publicQr1, privateQr1){
+_print1(publicQr1, privateQr1, publicKey1, privateKey1){
   const htmlToPrint = `
   <html>
     <head>
@@ -101,7 +101,7 @@ _print1(publicQr1, privateQr1){
         <div class="qrcode""><img src="${privateQr1}"></div>
       </div>
       <div class="text-container">
-        <div>Public Key: ${this.publicKey1}</br></br> Private Key: ${this.privateKey1}</div>
+        <div>Public Key: ${publicKey1}</br></br> Private Key: ${privateKey1}</div>
       </div>
     </body>
   </html>
@@ -109,7 +109,7 @@ _print1(publicQr1, privateQr1){
   this.$.print.print(htmlToPrint)
 }
 
-_print2(publicQr1, privateQr1, publicQr2, privateQr2){
+_print2(publicQr1, privateQr1, publicQr2, privateQr2, publicKey1, privateKey1, publicKey2, privateKey2){
   const htmlToPrint = `
   <html>
     <head>
@@ -141,7 +141,7 @@ _print2(publicQr1, privateQr1, publicQr2, privateQr2){
         <div class="qrcode""><img src="${privateQr1}"></div>
       </div>
       <div class="text-container">
-        <div>Public Key: ${this.publicKey1}</br></br> Private Key: ${this.privateKey1}</div>
+        <div>Public Key: ${publicKey1}</br></br> Private Key: ${privateKey1}</div>
       </div>
 
     <div class="container">
@@ -149,7 +149,7 @@ _print2(publicQr1, privateQr1, publicQr2, privateQr2){
       <div class="qrcode""><img src="${privateQr2}"></div>
     </div>
     <div class="text-container">
-      <div>Public Key: ${this.publicKey2}</br></br> Private Key: ${this.privateKey2}</div>
+      <div>Public Key: ${publicKey2}</br></br> Private Key: ${privateKey2}</div>
     </div>
 
     </body>
