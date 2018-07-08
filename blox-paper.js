@@ -74,6 +74,7 @@ _print1(publicQr1, privateQr1, publicKey1, privateKey1){
   <html>
     <head>
     <title>EOS Paper Wallet</title>
+    <h1>EOS <span>Launch</span></h1>
       <style>
       :host {
         display: block;
@@ -92,6 +93,16 @@ _print1(publicQr1, privateQr1, publicKey1, privateKey1){
       }
       .text-container{
         padding-left: 50px;
+      }
+      h1 {
+        font-size: 22px;
+        color: #000000;
+        text-decoration: none;
+        margin: 0;
+        font-weight: 200;
+      }
+      h1 span {
+        font-weight: 800;
       }
       </style>
     </head>
@@ -133,10 +144,24 @@ _print2(publicQr1, privateQr1, publicQr2, privateQr2, publicKey1, privateKey1, p
       .text-container{
         padding-left: 50px;
       }
+      h1 {
+        padding-left: 50px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', "Helvetica Neue", sans-serif;
+        font-size: 36px;
+        color: #000000;
+        text-decoration: none;
+        margin: 0;
+        font-weight: 200;
+      }
+      h1 span {
+        font-weight: 800;
+      }
       </style>
     </head>
     <body>
+      <h1>EOS <span>Launch</span></h1>
       <div class="container">
+      <p>Active:</p>
         <div class="qrcode"><img src="${publicQr1}"></div>
         <div class="qrcode""><img src="${privateQr1}"></div>
       </div>
@@ -145,6 +170,7 @@ _print2(publicQr1, privateQr1, publicQr2, privateQr2, publicKey1, privateKey1, p
       </div>
 
     <div class="container">
+    <p>Owner:</p>
       <div class="qrcode"><img src="${publicQr2}"></div>
       <div class="qrcode""><img src="${privateQr2}"></div>
     </div>
